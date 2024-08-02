@@ -1,0 +1,54 @@
+upperNav :is(i, p, a) {
+    font-size: 14px;
+
+}
+
+nav {
+    img {
+        width: 150px;
+    }
+
+    li {
+        padding: 10px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover a {
+            color: white;
+        }
+
+        &:hover {
+            background-color: #0484CF;
+        }
+
+        a {
+            color: #0484CF;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.home {
+    .layer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+    }
+
+    img {
+        background-position: center;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+:target {
+    background-color: #0484CF;
+}
+
+:target a {
+    color: white;
+}

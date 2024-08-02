@@ -1,0 +1,45 @@
+upperNav :is(i, p, a) {
+  font-size: 14px;
+}
+
+nav img {
+  width: 150px;
+}
+nav li {
+  padding: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+nav li:hover a {
+  color: white;
+}
+nav li:hover {
+  background-color: #0484CF;
+}
+nav li a {
+  color: #0484CF;
+  text-decoration: none;
+}
+
+.home .layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+}
+.home img {
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+}
+
+:target {
+  background-color: #0484CF;
+}
+
+:target a {
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */
