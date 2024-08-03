@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto Medical</title>
+    <link rel="shortcut icon"
+        href="https://www.portotheme.com/wordpress/porto/medical/wp-content/themes/porto/images/logo/apple-touch-icon_152x152.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../Assignment 2/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <upperNav class="d-block bg-secondary-subtle py-3">
-        <div class="container d-flex">
+
+    <upperNav class="d-block">
+        <div class="container-md container-fluid d-flex">
             <div class="d-flex ms-auto">
-                <div class="me-4 d-flex align-items-center">
+                <div class="d-flex align-items-center py-3">
                     <i class="text-primary me-2 fa-solid fa-location-crosshairs"></i>
                     <p class="m-0 text-muted">1234 Street Name, City Name</p>
                 </div>
-                <div class="me-4 d-flex align-items-center">
+                <div class="verticleLine"></div>
+                <div class="d-flex align-items-center py-3">
                     <i class="text-primary me-2 fa-brands fa-whatsapp"></i>
                     <a class="text-muted text-decoration-none">123-456-7890</a>
                 </div>
-                <div class="me-4 d-flex align-items-center">
+                <div class="verticleLine"></div>
+                <div class="d-flex align-items-center py-3">
                     <i class="text-primary me-2 fa-regular fa-envelope"></i>
                     <p class="m-0">
                         <a class="text-muted text-decoration-none" href="mailto:mail@domain.com">mail@domain.com</a>
@@ -33,11 +39,11 @@
     </upperNav>
 
     <nav>
-        <div class="container">
-            <div class="d-flex align-items-center py-3">
+        <div class="container-md container-fluid">
+            <div class="d-flex align-items-center py-4">
                 <img src="images/logo-medical.png" alt="">
                 <div class="ms-auto">
-                    <ul class="d-flex gap-4 list-unstyled m-0">
+                    <ul class="gap-4 list-unstyled m-0 d-md-flex d-none">
                         <li id="home">
                             <a href="#home">Home</a>
                         </li>
@@ -69,14 +75,81 @@
         </div>
     </nav>
 
-    <section class="home">
+    <section id="home">
         <div class="position-relative">
-            <img src="images/medical-slide-1.jpg" alt="">
+            <img src="images/medical-slide-1.jpg" class="w-100" alt="">
             <div class="layer">
             </div>
         </div>
+
+        <div class="homeText">
+            <h1 class="text-uppercase fw-bold fa-4x">Specialists</h1>
+            <p class="text-uppercase my-2">20 years caring about you</p>
+            <p><span>We are located in New York</span></p>
+        </div>
+
     </section>
-   
+
+    <div id="blueCard" class="row w-75 mx-auto position-relative translate-middle-y">
+
+        <div class="d-flex justify-content-center align-items-center fs-5 py-3">
+
+            <div class="me-3">
+                <img
+                    src="https://www.portotheme.com/wordpress/porto/medical/wp-content/uploads/sites/67/2016/09/medical-icon-heart.png">
+            </div>
+
+            <div class="d-flex flex-column text-white fw-bold">
+                <p class="m-0">Medical</p>
+                <p class="m-0">Treatment</p>
+            </div>
+
+        </div>
+
+        <div id="lighterBlue"
+            class="d-flex justify-content-center align-items-center text-white fw-bold text-uppercase fs-14">
+            <p class="m-0 me-2">Doctors Timetable</p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center text-white fw-bold text-uppercase fs-14">
+            <p class="m-0 me-2">Opening Hours</p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </div>
+
+        <div id="darkerBlue" class="d-flex justify-content-center align-items-center text-white">
+            <div class="me-3">
+                <i class="fa-solid fa-phone fa-2x"></i>
+            </div>
+            <div class="d-flex flex-column">
+                <p class="m-0">Emergency case</p>
+                <p class="m-0 fs-3 ">(800)123-4567</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="about" class="container-md my-5 container-fluid">
+        <div class="row">
+
+            <div class="col-md-8 col-12">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit, leo vitae interdum
+                    pretium,
+                    tortor risus dapibus tortor, eu suscipit orci leo sed nisl. Integer et ipsum eu nulla auctor mattis
+                    sit
+                    amet
+                    in diam. Vestibulum non ornare arcu. Class aptent taciti sociosqu ad...</p>
+                <button class="btn btn-outline-dark rounded-0 border-2 fw-bold fs-14 px-4 mt-4">READ MORE</button>
+            </div>
+
+            <div class="col-md-4 d-flex col-12">
+                <img class="dropShadow w-75 mx-md-auto mt-md-0 mt-3" src="images/medical-gallery-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
