@@ -1,3 +1,13 @@
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1200px;
+  }
+}
 upperNav :is(i, p, a) {
   font-size: 14px;
 }
@@ -36,6 +46,10 @@ nav li a {
   color: #0484CF;
   text-decoration: none;
 }
+nav .fa-bars {
+  color: #0484CF;
+  cursor: pointer;
+}
 
 #home .layer {
   width: 100%;
@@ -52,7 +66,7 @@ nav li a {
   color: white;
   position: absolute;
   top: 50%;
-  left: 15%;
+  transform: translateY(-25%);
 }
 
 :target {
@@ -85,10 +99,6 @@ nav li a {
   background-color: gray;
 }
 
-#blueCard > div {
-  flex: 1;
-}
-
 #blueCard {
   background-color: #008FE2;
 }
@@ -102,15 +112,17 @@ nav li a {
   position: relative;
   overflow: hidden;
 }
-#lighterBlue::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 0;
-  border-top: 55px solid transparent;
-  border-bottom: 55px solid transparent;
-  border-left: 40px solid #008FE2;
+@media screen and (min-width: 768px) {
+  #lighterBlue::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    border-top: 55px solid transparent;
+    border-bottom: 55px solid transparent;
+    border-left: 40px solid #008FE2;
+  }
 }
 
 #darkerBlue {
@@ -122,6 +134,118 @@ nav li a {
 
 #about .dropShadow {
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+}
+
+#departments {
+  background-color: #F7F7F7;
+}
+#departments .departments-content h5 {
+  color: #0484CF;
+}
+#departments img {
+  width: 150%;
+}
+#departments p {
+  color: gray;
+}
+
+#doctors p {
+  color: gray;
+}
+#doctors .docCard:hover .doc {
+  background-color: #0484CF;
+  transition: all 0.3s;
+}
+#doctors .docCard:hover i {
+  color: white;
+  transition: all 0.3s;
+}
+#doctors .docCard:hover p {
+  color: white;
+  transition: all 0.3s;
+}
+#doctors .arrows:hover {
+  color: #0484CF;
+  transition: all 0.3s;
+}
+#doctors .doc-info :nth-child(1) {
+  color: gray;
+}
+#doctors .doc-info :nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+section#resources {
+  background-color: #F7F7F7;
+}
+section#resources p {
+  color: gray;
+}
+section#resources .card {
+  cursor: pointer;
+}
+section#resources .card:hover {
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+section#resources h5:hover {
+  color: #0484CF;
+}
+
+#insurance p {
+  color: gray;
+}
+
+#testimonials {
+  background-color: #2D529F;
+}
+#testimonials .cirlce {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+#testimonials .cirlce i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#testimonials .jhonSmith h5::before {
+  content: "";
+  height: 2px;
+  width: 75%;
+  top: -20px;
+  left: 12.5%;
+  position: absolute;
+  background-color: white;
+}
+
+footer {
+  background-color: #34383D;
+  font-size: 0.75rem;
+}
+footer h5 {
+  color: white;
+  margin: 0;
+}
+footer h5 + div {
+  color: gray;
+}
+footer p {
+  margin: 5px 0px;
+}
+footer .iconHolder div {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  cursor: pointer;
+}
+footer .iconHolder div:hover {
+  color: white;
+  background-color: black;
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,9 +1,25 @@
+$primaryColor: #0484CF;
+$secondaryColor: #F7F7F7;
+
+
+@media (min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px;
+    }
+}
+
 upperNav :is(i, p, a) {
     font-size: 14px;
 }
 
 upperNav {
-    background-color: #F7F7F7;
+    background-color: $secondaryColor;
 }
 
 .verticleLine {
@@ -32,13 +48,18 @@ nav {
         }
 
         &:hover {
-            background-color: #0484CF;
+            background-color: $primaryColor;
         }
 
         a {
-            color: #0484CF;
+            color: $primaryColor;
             text-decoration: none;
         }
+    }
+
+    .fa-bars {
+        color: $primaryColor;
+        cursor: pointer;
     }
 
 }
@@ -61,13 +82,13 @@ nav {
         color: white;
         position: absolute;
         top: 50%;
-        left: 15%;
+        transform: translateY(-25%);
     }
 
 }
 
 :target {
-    background-color: #0484CF;
+    background-color: $primaryColor;
 }
 
 :target a {
@@ -101,10 +122,6 @@ nav {
     }
 }
 
-#blueCard>div {
-    flex: 1;
-}
-
 #blueCard {
     background-color: #008FE2;
 }
@@ -118,16 +135,20 @@ nav {
     position: relative;
     overflow: hidden;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: 0;
-        border-top: 55px solid transparent;
-        border-bottom: 55px solid transparent;
-        border-left: 40px solid #008FE2;
+    @media screen and (min-width:768px) {
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            border-top: 55px solid transparent;
+            border-bottom: 55px solid transparent;
+            border-left: 40px solid #008FE2;
+        }
     }
+
 }
 
 #darkerBlue {
@@ -138,8 +159,151 @@ nav {
     }
 }
 
-#about{
-    .dropShadow{
-        filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.2));
+#about {
+    .dropShadow {
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
     }
+}
+
+#departments {
+    background-color: $secondaryColor;
+
+    .departments-content h5 {
+        color: $primaryColor;
+    }
+
+    img {
+        width: 150%;
+    }
+
+    p {
+        color: gray;
+    }
+}
+
+#doctors {
+    p {
+        color: gray;
+    }
+
+    .docCard:hover {
+        .doc {
+            background-color: $primaryColor;
+            transition: all 0.3s;
+        }
+
+        i {
+            color: white;
+            transition: all 0.3s;
+        }
+
+        p {
+            color: white;
+            transition: all 0.3s;
+        }
+
+    }
+
+    .arrows:hover {
+        color: $primaryColor;
+        transition: all 0.3s;
+    }
+
+    .doc-info :nth-child(1) {
+        color: gray;
+    }
+
+    .doc-info :nth-child(2) {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+}
+
+section#resources {
+    background-color: $secondaryColor;
+
+    p {
+        color: gray;
+    }
+
+    .card {
+        cursor: pointer;
+    }
+
+    .card:hover {
+        box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s;
+    }
+
+    h5:hover {
+        color: $primaryColor;
+    }
+}
+
+#insurance {
+    p {
+        color: gray;
+    }
+}
+
+#testimonials {
+    background-color: #2D529F;
+
+    .cirlce {
+        height: 50px;
+        width: 50px;
+        position: relative;
+
+        & i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    }
+
+    .jhonSmith h5::before {
+        content: '';
+        height: 2px;
+        width: 75%;
+        top: -20px;
+        left: calc(0.5*25%);
+        position: absolute;
+        background-color: white;
+    }
+}
+
+footer {
+    background-color: #34383D;
+    font-size: .75rem;
+
+    h5 {
+        color: white;
+        margin: 0;
+    }
+
+    h5+div {
+        color: gray;
+    }
+
+    p {
+        margin: 5px 0px;
+    }
+
+    .iconHolder div {
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+            background-color: black;
+            transition: all 0.5s;
+        }
+
+    }
+
 }
